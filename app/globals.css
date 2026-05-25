@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background-color: #fafaf7;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Safe-area padding for iOS notched devices */
+.safe-pt {
+  padding-top: max(env(safe-area-inset-top), 1rem);
+}
+.safe-pb {
+  padding-bottom: max(env(safe-area-inset-bottom), 1rem);
+}
+
+/* Hide the default file input — we use a styled label instead */
+input[type="file"].hidden-file {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
